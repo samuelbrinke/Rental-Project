@@ -1,8 +1,8 @@
 # Rental-Project
 
-1. Riktigt konto med användarnamn + lösenord 
+1. (LOGIN )Riktigt konto med användarnamn + lösenord 
 
-2. Kunna skapa ett konto. 
+2. (REGISTER ACCOUNT)Kunna skapa ett konto. 
 
 3. Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
 
