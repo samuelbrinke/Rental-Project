@@ -9,15 +9,13 @@
     <Grid Background="#fafafa">
         <StackPanel VerticalAlignment="Center">
             <Label Content="Blockbuster Movie Rental" Margin="0, 0, 0, 30" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20"></Label>
-            <Border Width="200" BorderBrush="Black" BorderThickness="1">
-            <StackPanel>
-                
+            <Border Width="200" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                <StackPanel>
                     <Label Content="Login" HorizontalAlignment="Center"></Label>
                     <Label Content="Username"></Label>
                     <TextBox></TextBox>
                     <Button Content="Login"></Button>
-                
-            </StackPanel>
+                </StackPanel>
             </Border>
         </StackPanel>
     </Grid>
