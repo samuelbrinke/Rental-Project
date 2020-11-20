@@ -21,9 +21,7 @@
                     </StackPanel>
                     <StackPanel Margin="5" Orientation="Horizontal">
                         <Label Content="Dont have an account?"></Label>
-                        <TextBlock VerticalAlignment="Center">
-                            <Hyperlink NavigateUri="RegisterWindow.xaml">Click here!</Hyperlink>
-                        </TextBlock>
+                        <Button Click="Register_btn" Background="#fafafa" BorderThickness="0" Foreground="#1da1f2" Content="Click me!"></Button>
                     </StackPanel>
                 </StackPanel>
             </Border>

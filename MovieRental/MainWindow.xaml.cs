@@ -40,5 +40,11 @@ namespace MovieRental
                 TxtName.Text = "...";
             }
         }
+
+        private void Register_btn(object sender, RoutedEventArgs e)
+        {
+            var register_window = new RegisterWindow();
+            register_window.Show();
+        }
     }
 }
