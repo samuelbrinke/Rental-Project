@@ -16,8 +16,8 @@
                     </StackPanel>
                     <StackPanel Margin="10">
                         <Label Content="Username"></Label>
-                        <TextBox Margin="0, 0, 0, 10" BorderBrush="#e6ecf0"></TextBox>
-                        <Button Content="Login" Background="#1da1f2" Foreground="#fff" BorderThickness="0"></Button>
+                        <TextBox Name="TxtName" Margin="0, 0, 0, 10" BorderBrush="#e6ecf0"></TextBox>
+                        <Button Click="Login" Content="Login" Background="#1da1f2" Foreground="#fff" BorderThickness="0"></Button>
                     </StackPanel>
                 </StackPanel>
             </Border>
