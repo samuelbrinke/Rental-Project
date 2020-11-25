@@ -12,6 +12,10 @@
 
 
 ## MainWindow som visar alla filmer 
+- [ ] Seeda filmerna till databasen
+- [ ] Lägga till en placeholder bild på bilder som ej fungerar.
+- [ ] Visa alla filmer i mainwindow
+ 
 - [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
 
 - [ ] Ny ruta för att kolla sin profil och tex ändra lösenord. 
