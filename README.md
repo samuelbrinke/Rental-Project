@@ -2,11 +2,11 @@
 
 
 
-1.[] (LOGIN )Riktigt konto med användarnamn + lösenord 
-TODO: [].Ändra modellen på databasen och lägg till lösenord på user.
-      [].Ändra designen ocyh funktionen för att kolla både användarnamn och lösenord. 
+1. (LOGIN )Riktigt konto med användarnamn + lösenord 
+- [ ] Ändra modellen på databasen och lägg till lösenord på user.
+- [ ] Ändra designen ocyh funktionen för att kolla både användarnamn och lösenord. 
 
-2.[] (REGISTER ACCOUNT)Kunna skapa ett konto. 
+2. [ ] (REGISTER ACCOUNT)Kunna skapa ett konto. 
  TODO: [] Gör deisgnen
   TODO[] Koppla ihop med databasen för att skapa en user
 
