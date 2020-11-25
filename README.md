@@ -11,13 +11,12 @@
 - [ ] Koppla ihop med databasen för att skapa en user
 
 
-3. [] MainWindow som visar alla filmer
-TODO: 
-      [] Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
+## MainWindow som visar alla filmer 
+- [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
 
-4.[] Ny ruta för att kolla sin profil och tex ändra lösenord. 
+- [ ] Ny ruta för att kolla sin profil och tex ändra lösenord. 
 
-5.[] Få upp mer info om vald film och alternativ till att hyra. 
+- [ ] Få upp mer info om vald film och alternativ till att hyra. 
 
-6.[] Shoppingcart (Med funktioner som tex bekräfta hyrning och betalning.)
+- [ ] Shoppingcart (Med funktioner som tex bekräfta hyrning och betalning.)
 
