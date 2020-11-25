@@ -17,5 +17,14 @@ namespace DatabaseConnection
         {
             return ctx.Users.FirstOrDefault(c => c.UserName.ToLower() == username.ToLower());
         }
+
+        public static List<Movie> GetMovie(int movie_skip_count, int movie_take_count)
+        {
+            return ctx.Movies
+                .OrderBy(m => m.Title)
+                .Skip(movie_skip_count)
+                .Take(movie_take_count)
+                .ToList();
+        }
     }
 }
