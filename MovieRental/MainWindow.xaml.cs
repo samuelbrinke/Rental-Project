@@ -37,7 +37,10 @@ namespace MovieRental
             }
             else
             {
-                TxtName.Text = "...";
+                TxtName.Text = "";
+                InvalidUsername.Content = "Username or password is incorrect";
+                InvalidUsername.Visibility = Visibility.Visible;
+                TxtName.Focus();
             }
         }
 

@@ -6,11 +6,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatabaseConnection
 {
-    public class API
+    public static class API
     {
+        static Context ctx;
+        static API()
+        {
+            ctx = new Context();
+        }
         public static User GetUserByUsername(string username)
         {
-            using var ctx = new Context();
             return ctx.Users.FirstOrDefault(c => c.UserName.ToLower() == username.ToLower());
         }
     }
