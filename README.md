@@ -7,9 +7,9 @@
 - [ ] Ändra designen ocyh funktionen för att kolla både användarnamn och lösenord. 
 
 ## (REGISTER ACCOUNT)Kunna skapa ett konto. 
-- [ ] Gör deisgnen
-- [ ] Koppla ihop med databasen för att skapa en user
-
+- [x] Gör deisgnen
+- [x] Koppla ihop med databasen för att skapa en user
+- [ ] Krashar när man registrerar en user med ett användarnamn som redan finns (Bugg)
 
 ## MainWindow som visar alla filmer 
 - [x] Seeda filmerna till databasen
