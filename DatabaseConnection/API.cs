@@ -20,7 +20,8 @@ namespace DatabaseConnection
 
         public static bool CheckPassword(User user, string password)
         {
-            if (user.Password == password)
+            
+            if (user != null && user.Password == password)
             {
                 return true;
             }

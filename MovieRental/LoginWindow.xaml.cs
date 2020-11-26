@@ -45,6 +45,7 @@ namespace MovieRental
             else
             {
                 TxtName.Text = "";
+                TxtPassword.Password = "";
                 InvalidUsername.Content = "Username or password is incorrect";
                 InvalidUsername.Visibility = Visibility.Visible;
                 TxtName.Focus();
