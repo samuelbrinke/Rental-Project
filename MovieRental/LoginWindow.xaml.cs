@@ -29,7 +29,8 @@ namespace MovieRental
         private void Login_Btn(object sender, RoutedEventArgs e)
         {
             //State.Users = API.GetUserByUsername(TxtName.Text.Trim());
-            if(API.CheckPassword(API.GetUserByUsername(TxtName.Text.Trim()), TxtPassword.Password))
+            bool checkPassword = API.CheckPassword(API.GetUserByUsername(TxtName.Text.Trim()), TxtPassword.Password);
+            if (checkPassword)
             {
                 State.Users = API.GetUserByUsername(TxtName.Text.Trim());
                 if (State.Users != null)
