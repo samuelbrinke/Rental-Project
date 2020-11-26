@@ -13,6 +13,7 @@ namespace DatabaseConnection
             using (var ctx = new Context())
             {
                 ctx.RemoveRange(ctx.Users);
+                ctx.RemoveRange(ctx.Movies)
 
                 var movies = new List<Movie>();
                 string[] lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
