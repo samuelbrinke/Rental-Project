@@ -50,5 +50,23 @@ namespace DatabaseConnection
             ctx.Users.Add(user);
             ctx.SaveChanges();
         }
+
+        public static bool RegisterSale(User user, Movie movie)
+        {
+            // Försök att lägga till ett nytt sales record
+            try
+            {
+                ctx.Add(new Rental() { Date = DateTime.Now, User = user, Movie = movie });
+
+                bool one_record_added = ctx.SaveChanges() == 1;
+                return one_record_added;
+            }
+            catch (DbUpdateException e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
+                return false;
+            }
+        }
     }
 }

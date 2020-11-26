@@ -61,7 +61,7 @@ namespace MovieRental
                             VerticalAlignment = VerticalAlignment.Center,
                             Margin = new Thickness(4, 4, 4, 4),
                         };
-                        //image.MouseUp += Image_MouseUp;
+                        image.MouseUp += Image_MouseUp;
 
                         try
                         {
@@ -85,6 +85,25 @@ namespace MovieRental
                     }
                 }
             }
+        }
+        // Vad som händer när man klickar på en filmikon i appen.
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            // Ta reda på vilken koordinat den klickade bilden har.
+            var x = Grid.GetColumn(sender as UIElement);
+            var y = Grid.GetRow(sender as UIElement);
+
+            // Används koordinaten för att ta reda på vilken motsvarande record det rörde sig om.
+            int i = y * MovieGrid.ColumnDefinitions.Count + x;
+            // Lägg valet på minne.
+            State.Pick = State.Movies[i];
+
+            // Försök att registrera en uthyrning.
+            if (API.RegisterSale(State.Users, State.Pick))
+                // MessageBox är små pop-up fönster som är behändiga för att varna användaren om fel etc.
+                MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
     }
 }

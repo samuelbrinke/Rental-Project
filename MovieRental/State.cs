@@ -9,5 +9,6 @@ namespace MovieRental
     {
         public static User Users { get; set; }
         public static List<Movie> Movies { get; set; }
+        public static Movie Pick { get; set; } // Film som användaren valt att hyra
     }
 }

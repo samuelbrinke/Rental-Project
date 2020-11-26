@@ -12,6 +12,7 @@ namespace DatabaseConnection
         {
             using (var ctx = new Context())
             {
+                ctx.RemoveRange(ctx.Rentals);
                 ctx.RemoveRange(ctx.Users);
                 ctx.RemoveRange(ctx.Movies);
 
