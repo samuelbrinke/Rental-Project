@@ -16,8 +16,10 @@
                     </StackPanel>
                     <StackPanel Margin="10">
                         <Label Content="Username"></Label>
-                        <TextBox Name="TxtName" Margin="0, 0, 0, 10" BorderBrush="#e6ecf0"></TextBox>
-                        <Button Click="Login_Btn" Content="Login" Background="#1da1f2" Foreground="#fff" BorderThickness="0"></Button>
+                        <TextBox Name="TxtName" BorderBrush="#e6ecf0"></TextBox>
+                        <Label Content="Password"></Label>
+                        <TextBox Name="TxtPassword" Margin="0, 0, 0, 10" BorderBrush="#e6ecf0"></TextBox>
+                        <Button Click="Login_Btn" IsDefault="True" Content="Login" Background="#1da1f2" Foreground="#fff" BorderThickness="0"></Button>
                     </StackPanel>
                     <StackPanel Margin="10, 0">
                         <Label Name="InvalidUsername" Visibility="Collapsed" Content="" Background="#f8d7da" Foreground="#721c24"></Label>
