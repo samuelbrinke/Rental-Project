@@ -26,5 +26,19 @@ namespace DatabaseConnection
                 .Take(movie_take_count)
                 .ToList();
         }
+
+        public static void AddUser(string username, string firstname, string lastname, int personalnumber, int phonenumber, int zipcode, string adress )
+        {
+            User user = new User();
+            user.FirstName = firstname;
+            user.LastName = lastname;
+            user.UserName = username;
+            user.PhoneNumber = phonenumber;
+            user.ZipCode = zipcode;
+            user.Adress = adress;
+            user.PersonalNumber = personalnumber;
+            ctx.Users.Add(user);
+            ctx.SaveChanges();
+        }
     }
 }
