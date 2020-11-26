@@ -4,7 +4,10 @@
 
 ## (LOGIN )Riktigt konto med användarnamn + lösenord 
 - [ ] Ändra modellen på databasen och lägg till lösenord på user.
-- [ ] Ändra designen ocyh funktionen för att kolla både användarnamn och lösenord. 
+- [ ] Ändra designen ocyh funktionen för att kolla både användarnamn och lösenord.
+
+**BONUS**
+- [ ] En progressbar för laddningen när man loggar in.
 
 ## (REGISTER ACCOUNT)Kunna skapa ett konto. 
 - [x] Gör deisgnen
@@ -23,4 +26,7 @@
 - [ ] Få upp mer info om vald film och alternativ till att hyra. 
 
 - [ ] Shoppingcart (Med funktioner som tex bekräfta hyrning och betalning.)
+
+**BONUS**
+- [ ] En progressbar för laddningen när man laddar in filmer.
 
