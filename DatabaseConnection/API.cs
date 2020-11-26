@@ -18,6 +18,15 @@ namespace DatabaseConnection
             return ctx.Users.FirstOrDefault(c => c.UserName.ToLower() == username.ToLower());
         }
 
+        public static bool CheckPassword(User user, string password)
+        {
+            if (user.Password == password)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
         public static List<Movie> GetMovie(int movie_skip_count, int movie_take_count)
         {
             return ctx.Movies

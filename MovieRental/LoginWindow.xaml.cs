@@ -28,13 +28,19 @@ namespace MovieRental
 
         private void Login_Btn(object sender, RoutedEventArgs e)
         {
-            State.Users = API.GetUserByUsername(TxtName.Text.Trim());
-            if (State.Users != null)
+            //State.Users = API.GetUserByUsername(TxtName.Text.Trim());
+            if(API.CheckPassword(API.GetUserByUsername(TxtName.Text.Trim()), TxtPassword.Password))
             {
-                var next_window = new MovieWindow();
-                next_window.Show();
-                this.Close();
+                State.Users = API.GetUserByUsername(TxtName.Text.Trim());
+                if (State.Users != null)
+                {
+                    var next_window = new MovieWindow();
+                    next_window.Show();
+                    this.Close();
+                }
             }
+
+            
             else
             {
                 TxtName.Text = "";
