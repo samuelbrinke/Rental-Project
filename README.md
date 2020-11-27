@@ -18,7 +18,7 @@
 - [x] Seeda filmerna till databasen
 - [ ] Lägga till en placeholder bild på bilder som ej fungerar.
 - [x] Visa alla filmer i mainwindow (Bugg, dubbletter)
- 
+ -[ ]Fixa så filmerna går att sortera upp utefter genrar från csv filen.
 - [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
 
 - [ ] Ny ruta för att kolla sin profil och tex ändra lösenord. 
