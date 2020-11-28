@@ -22,13 +22,14 @@ namespace DatabaseConnection
                 for (int i = 1; i < 100; i++)
                 {
                     string[] cells = lines[i].Split(',');
+                    string genre = cells[4].Replace('|', ' ');
                     string url = cells[5].Trim('"');
 
                     // Hoppa över alla icke-fungerande url:er
                     try { var test = new Uri(url); }
                     catch (Exception) { continue; }
 
-                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url, Genre = genre });
                 }
 
                 ctx.AddRange(movies);

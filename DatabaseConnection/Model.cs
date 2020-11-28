@@ -35,6 +35,8 @@ namespace DatabaseConnection
 
         public string ImageURL { get; set; }
 
+        public string Genre { get; set; }
+
         public virtual List<Rental> Sales { get; set; }
     }
 
