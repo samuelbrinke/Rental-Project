@@ -31,7 +31,7 @@ namespace MovieRental
 
             int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)column_count);
 
-            for (int y = 0; y < row_count; y++)
+            for (int y = 1; y < row_count; y++)
             {
                 // Skapa en rad-definition för att bestämma hur hög just denna raden är.
                 MovieGrid.RowDefinitions.Add(
