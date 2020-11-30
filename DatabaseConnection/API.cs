@@ -68,5 +68,11 @@ namespace DatabaseConnection
                 return false;
             }
         }
+
+        public static void ChangePassword(User user)
+        {
+            ctx.Users.Update(user);
+            ctx.SaveChanges();
+        }
     }
 }

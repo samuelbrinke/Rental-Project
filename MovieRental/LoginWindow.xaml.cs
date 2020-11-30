@@ -56,6 +56,10 @@ namespace MovieRental
         {
             var register_window = new RegisterWindow();
             register_window.Show();
+            var profile = new Profile();
+            profile.Show();
+            
+
         }
     }
 }
