@@ -50,14 +50,15 @@ namespace MovieRental
             Grid_Profile.Visibility = Visibility.Visible;
             Grid_ResetPassword.Visibility = Visibility.Collapsed;
 
-
-
-
+            //Show informoation from user in database
             var user = State.Users;
             Username_txtBox.Text = user.UserName.ToString();
             FirstName_txtBox.Text = user.FirstName.ToString();
             LastName_txtBox.Text = user.LastName.ToString();
-            //PersonalNumber_txtBox = user.PersonalNumber.ToString() ;
+            PersonalNumber_txtBox.Text = user.PersonalNumber.ToString();
+            Adress_txtBox.Text = user.Adress.ToString();
+            ZipCode_txtBox.Text = user.ZipCode.ToString();
+            PhoneNumber_txtBox.Text = user.PhoneNumber.ToString();
 
         }
 
@@ -83,6 +84,16 @@ namespace MovieRental
 
         }
 
-       
+        private void Update_btn_Click(object sender, RoutedEventArgs e)
+        {
+            State.Users.UserName = Username_txtBox.Text;
+            State.Users.FirstName = FirstName_txtBox.Text;
+            State.Users.LastName = LastName_txtBox.Text;
+            State.Users.PersonalNumber = PersonalNumber_txtBox.Text;
+            State.Users.Adress = Adress_txtBox.Text;
+            State.Users.ZipCode = ZipCode_txtBox.Text;
+            State.Users.PhoneNumber = PhoneNumber_txtBox.Text;
+            API.ChangePassword(State.Users);
+        }
     }
 }

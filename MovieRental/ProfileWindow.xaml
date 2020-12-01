@@ -49,7 +49,11 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Grid.Row="0">
                         <Label Margin="10, 0">Username:</Label>
                         <TextBox Name ="Username_txtBox" Margin="10, 0"></TextBox>
                         <Label Margin="10, 0">Enter First Name:</Label>
@@ -58,8 +62,9 @@
                         <TextBox Margin="10, 0" Name ="LastName_txtBox"></TextBox>
                         <Label Margin="10, 0">Enter Personal Number:</Label>
                         <TextBox Margin="10, 0" Name ="PersonalNumber_txtBox"></TextBox>
+                        
                     </StackPanel>
-                    <StackPanel Grid.Column="1">
+                    <StackPanel Grid.Column="1" Grid.Row="0">
 
                         <Label Margin="10, 0">Enter Adress:</Label>
                         <TextBox Margin="10, 0" Name ="Adress_txtBox"></TextBox>
@@ -68,6 +73,8 @@
                         <Label Margin="10, 0">Enter PhoneNumber:</Label>
                         <TextBox Margin="10, 0" Name ="PhoneNumber_txtBox"></TextBox>
                     </StackPanel>
+                    <Button Name ="Update_btn" Click="Update_btn_Click" Grid.Row="1" Grid.ColumnSpan="2" Margin="100, 4"> Update Information</Button>
+                    
                     
                     
                     </Grid>
