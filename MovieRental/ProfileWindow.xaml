@@ -18,9 +18,31 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                  </Grid.ColumnDefinitions>
-                 <Button Name ="Profile_btn" Click="Profile_btn_Click" Grid.Column="0" Margin="10">Profile</Button>
-                  <Button Name ="Password_btn" Click="Password_btn_Click" Grid.Column="1" Margin="10">Reset Password</Button>
-                    <Button Name ="Movies_btn" Grid.Column="2" Margin="10">Movies</Button>
+                    
+                                            <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"                
+                            Name="Profile_btn"
+                            Click="Profile_btn_Click"
+                            Grid.Column="0"
+                            IsChecked="False"
+                            Content="FIRST" />
+                                            <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            Name="ResetPassword_btn"
+                            Click="ResetPassword_btn_Click"
+                            Grid.Column="1"
+                            IsChecked="True"
+                            Content="SECOND" />
+                                        <RadioButton
+                            Style="{StaticResource MaterialDesignTabRadioButton}"
+                            Margin="4"
+                            Click="Movie_btn_Click"
+                            Name="Movie_btn"
+                            Grid.Column="2"
+                            IsChecked="False"                           
+                            Content="THIRD" />      
                 </Grid>
                 <Grid Name ="Grid_Profile" Margin="10" Visibility="Collapsed">
                     <Grid.ColumnDefinitions>
