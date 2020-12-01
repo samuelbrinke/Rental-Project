@@ -37,7 +37,7 @@ namespace DatabaseConnection
                 .ToList();
         }
 
-        public static void AddUser(string username, string firstname, string lastname, int personalnumber, int phonenumber, int zipcode, string adress )
+        public static void AddUser(string username, string firstname, string lastname, string personalnumber, string phonenumber, string zipcode, string adress )
         {
             User user = new User();
             user.FirstName = firstname;

@@ -16,11 +16,11 @@ namespace DatabaseConnection
 
         public string LastName { get; set; }
 
-        public int PersonalNumber { get; set; }
+        public string PersonalNumber { get; set; }
 
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
-        public int ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         public string Adress { get; set; }
 

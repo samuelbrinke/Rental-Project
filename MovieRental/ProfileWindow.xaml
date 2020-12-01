@@ -26,7 +26,7 @@
                             Click="Profile_btn_Click"
                             Grid.Column="0"
                             IsChecked="False"
-                            Content="FIRST" />
+                            Content="Profile" />
                                             <RadioButton
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
@@ -34,7 +34,7 @@
                             Click="ResetPassword_btn_Click"
                             Grid.Column="1"
                             IsChecked="True"
-                            Content="SECOND" />
+                            Content="Password" />
                                         <RadioButton
                             Style="{StaticResource MaterialDesignTabRadioButton}"
                             Margin="4"
@@ -42,36 +42,36 @@
                             Name="Movie_btn"
                             Grid.Column="2"
                             IsChecked="False"                           
-                            Content="THIRD" />      
+                            Content="Orders" />      
                 </Grid>
-                <Grid Name ="Grid_Profile" Margin="10" Visibility="Collapsed">
+                <Grid Name ="Grid_Profile" Margin="10" Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Label>Username:</Label>
-                        <TextBox Name ="Username_txtBox"></TextBox>
-                        <Label>Enter First Name:</Label>
-                        <TextBox Name ="FirstName_txtBox"></TextBox>
-                        <Label>Enter Last Name:</Label>
-                        <TextBox Name ="LastName_txtBox"></TextBox>
-                        <Label>Enter Personal Number:</Label>
-                        <TextBox Name ="PersonalNumber_txtBox"></TextBox>
+                        <Label Margin="10, 0">Username:</Label>
+                        <TextBox Name ="Username_txtBox" Margin="10, 0"></TextBox>
+                        <Label Margin="10, 0">Enter First Name:</Label>
+                        <TextBox Margin="10, 0" Name ="FirstName_txtBox"></TextBox>
+                        <Label Margin="10, 0">Enter Last Name:</Label>
+                        <TextBox Margin="10, 0" Name ="LastName_txtBox"></TextBox>
+                        <Label Margin="10, 0">Enter Personal Number:</Label>
+                        <TextBox Margin="10, 0" Name ="PersonalNumber_txtBox"></TextBox>
                     </StackPanel>
                     <StackPanel Grid.Column="1">
-                        
-                        <Label>Enter Adress:</Label>
-                        <TextBox Name ="Adress_txtBox"></TextBox>
-                        <Label>Enter ZipCode:</Label>
-                        <TextBox Name ="ZipCode_txtBox"></TextBox>
-                        <Label>Enter PhoneNumber:</Label>
-                        <TextBox Name ="PhoneNumber_txtBox"></TextBox>
+
+                        <Label Margin="10, 0">Enter Adress:</Label>
+                        <TextBox Margin="10, 0" Name ="Adress_txtBox"></TextBox>
+                        <Label Margin="10, 0">Enter ZipCode:</Label>
+                        <TextBox Margin="10, 0" Name ="ZipCode_txtBox"></TextBox>
+                        <Label Margin="10, 0">Enter PhoneNumber:</Label>
+                        <TextBox Margin="10, 0" Name ="PhoneNumber_txtBox"></TextBox>
                     </StackPanel>
                     
                     
                     </Grid>
-                <Grid Name ="Grid_ResetPassword" Visibility="Visible">
+                <Grid Name ="Grid_ResetPassword" Visibility="Collapsed">
                     <StackPanel>
                         <Grid Name="GridForText">
                             <Grid.RowDefinitions>

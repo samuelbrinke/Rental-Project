@@ -54,7 +54,11 @@ namespace MovieRental
 
 
             var user = State.Users;
-            Username_txtBox.Text = State.Users.UserName.ToString();
+            Username_txtBox.Text = user.UserName.ToString();
+            FirstName_txtBox.Text = user.FirstName.ToString();
+            LastName_txtBox.Text = user.LastName.ToString();
+            //PersonalNumber_txtBox = user.PersonalNumber.ToString() ;
+
         }
 
         
