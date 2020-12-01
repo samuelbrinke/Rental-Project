@@ -1,5 +1,9 @@
 # Rental-Project 
 
+## TODO IMORGON ONSDAG
+- [ ] Göra klart profilen. (PRIO 1).
+- [ ] Göra klart menyn i moviesidan. (PRIO 1). Knapp till profilen behövs.
+- [ ] Börja pilla på Shoppingcarten om vi hinner.
 
 
 ## (LOGIN )Riktigt konto med användarnamn + lösenord 
