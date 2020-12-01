@@ -19,7 +19,7 @@
                     <ColumnDefinition></ColumnDefinition>
                  </Grid.ColumnDefinitions>
                  <Button Name ="Profile_btn" Click="Profile_btn_Click" Grid.Column="0" Margin="10">Profile</Button>
-                  <Button Name ="Password_btn" Grid.Column="1" Margin="10">Reset Password</Button>
+                  <Button Name ="Password_btn" Click="Password_btn_Click" Grid.Column="1" Margin="10">Reset Password</Button>
                     <Button Name ="Movies_btn" Grid.Column="2" Margin="10">Movies</Button>
                 </Grid>
                 <Grid Name ="Grid_Profile" Margin="10" Visibility="Collapsed">
@@ -70,7 +70,11 @@
                             </StackPanel>
                         </Grid>
                         <Grid>
-                            <Button Name ="ChangePassword_btn" Click="ChangePassword_btn_Click" Margin="100, 10">Change Password</Button>
+                            <StackPanel>
+                                <Label Name="SuccesOrNotLabel" Visibility="Collapsed"></Label>
+                                <Button Name ="ChangePassword_btn" Click="ChangePassword_btn_Click" Margin="100, 10">Change Password</Button>
+                                
+                            </StackPanel>
                         </Grid>
                     </StackPanel>
 

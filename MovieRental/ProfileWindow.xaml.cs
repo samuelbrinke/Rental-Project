@@ -34,18 +34,38 @@ namespace MovieRental
         private void Profile_btn_Click(object sender, RoutedEventArgs e)
         {
             Grid_Profile.Visibility = Visibility.Visible;
+            Grid_ResetPassword.Visibility = Visibility.Collapsed;
+            Profile_btn.Foreground = Brushes.White;
+            Password_btn.Foreground = Brushes.White;
+            Movies_btn.Foreground = Brushes.White;
             var user = State.Users;
             Username_txtBox.Text = State.Users.UserName.ToString();
         }
 
         private void ChangePassword_btn_Click(object sender, RoutedEventArgs e)
         {
-            if(NewPassword_box1.Password == NewPassword_box2.Password)
+            
+            if (NewPassword_box1.Password == NewPassword_box2.Password)
             {
                 State.Users.Password = NewPassword_box1.Password;
                 API.ChangePassword(State.Users);
-                ChangePassword_btn.Content = "Password changed";
+                SuccesOrNotLabel.Content = "Password succesfully updated";
+                SuccesOrNotLabel.Foreground = Brushes.Green;
+                SuccesOrNotLabel.Visibility = Visibility.Visible;
             }
+            else
+            {
+                SuccesOrNotLabel.Content = "!!Password not updated!! Check that password is matching";
+                SuccesOrNotLabel.Foreground = Brushes.Red;
+                SuccesOrNotLabel.Visibility = Visibility.Visible;
+            }
+            
+        }
+
+        private void Password_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Grid_Profile.Visibility = Visibility.Collapsed;
+            Grid_ResetPassword.Visibility = Visibility.Visible;
         }
     }
 }
