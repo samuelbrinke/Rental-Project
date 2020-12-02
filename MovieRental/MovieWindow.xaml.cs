@@ -18,10 +18,8 @@ namespace MovieRental
     /// </summary>
     public partial class MovieWindow : Window
     {
-        public MovieWindow()
+        public void LoadMovies()
         {
-            InitializeComponent();
-
             int movie_skip_count = 0;
             int movie_take_count = 100;
 
@@ -85,6 +83,12 @@ namespace MovieRental
                     }
                 }
             }
+        }
+        public MovieWindow()
+        {
+            InitializeComponent();
+            LoadMovies();
+            
         }
         // Vad som händer när man klickar på en filmikon i appen.
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
