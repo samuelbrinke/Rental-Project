@@ -75,5 +75,12 @@ namespace DatabaseConnection
             ctx.Users.Update(user);
             ctx.SaveChanges();
         }
+
+        public static List<Rental> GetRentalByUser(User user)
+        {
+            return ctx.Rentals
+                .Where(b => b.User.Equals(user))
+                .ToList();
+        }
     }
 }
