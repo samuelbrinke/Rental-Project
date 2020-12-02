@@ -37,6 +37,31 @@ namespace DatabaseConnection
                 .ToList();
         }
 
+        public static List<Movie> FilterMovieByAction()
+        {
+            return ctx.Movies
+                .Where(g => g.Genre.Contains("action"))
+                .ToList();
+        }
+        public static List<Movie> FilterMovieByComedy()
+        {
+            return ctx.Movies
+                .Where(g => g.Genre.Contains("Comedy"))
+                .ToList();
+        }
+        public static List<Movie> FilterMovieByFamily()
+        {
+            return ctx.Movies
+                .Where(g => g.Genre.Contains("Family"))
+                .ToList();
+        }
+        public static List<Movie> FilterMovieByHorror()
+        {
+            return ctx.Movies
+                .Where(g => g.Genre.Contains("Horror"))
+                .ToList();
+        }
+
         public static void AddUser(string username, string firstname, string lastname, string personalnumber, string phonenumber, string zipcode, string adress )
         {
             User user = new User();
