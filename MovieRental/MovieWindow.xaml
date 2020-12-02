@@ -15,44 +15,41 @@
         -->
         <ScrollViewer>
             <StackPanel>
-            <Grid Name ="Menu">
-                <Grid.RowDefinitions>
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel>
+                <Grid Name ="Menu" Background="#E6EFF4">
+                    <Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition>
+                        </ColumnDefinition>
+                        <ColumnDefinition>
+                        </ColumnDefinition>
+                        <ColumnDefinition>
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
                         <Label Content="Blockbuster" FontSize="24"></Label>
                     </StackPanel>
-                    <StackPanel>
-                        <Menu>
-                            <MenuItem Header="_Genre" Background="#E6EFF4">
-                                <MenuItem Header="Comedy">
-                                </MenuItem>
-                                <MenuItem Header="Action">
-                                </MenuItem>
-                                <MenuItem Header="Family">
-                                </MenuItem>
-                                <MenuItem Header="Horror">
-                                </MenuItem>
-                            </MenuItem>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Menu Background="#E6EFF4">
+                            <ComboBox
+                                materialDesign:HintAssist.Hint="Genre">
+                                <ComboBoxItem Content="Action">
+                                </ComboBoxItem>
+                                <ComboBoxItem Content="Comedy">
+                                </ComboBoxItem>
+                                <ComboBoxItem Content="Family">
+                                </ComboBoxItem>
+                                <ComboBoxItem Content="Horror">
+                                </ComboBoxItem>
+                            </ComboBox>
                         </Menu>
+                        <Button Content="Home" Background="#E6EFF4" Foreground="Black" BorderThickness="0"></Button>
                     </StackPanel>
-                    <StackPanel >
-                            <Button Content="Profile"></Button>
+                    <StackPanel Background="#E6EFF4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <Button Content="Profile" HorizontalAlignment="Right"></Button>
                     </StackPanel>
-                        <StackPanel>
-                            <Popup IsOpen="True" Margin="10" 
-                               Width="100" Height="100" VerticalAlignment="Top">
-                            
-                            <StackPanel>
-                                <TextBox>
-                                asdagf
-                            </TextBox>
-                            </StackPanel>
-                        </Popup>
-                        </StackPanel>
-                    </StackPanel>
-            </Grid>
-            <Grid Name="MovieGrid" ShowGridLines="True">
+                </Grid>
+                <Grid Name="MovieGrid" ShowGridLines="True">
 
                     <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
                     <Grid.RowDefinitions>
