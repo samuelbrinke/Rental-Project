@@ -18,12 +18,34 @@ namespace MovieRental
     /// </summary>
     public partial class MovieWindow : Window
     {
-        public void LoadMovies()
+        public void LoadAllMovies()
         {
             int movie_skip_count = 0;
             int movie_take_count = 100;
-
-            State.Movies = API.GetMovie(movie_skip_count, movie_take_count);
+            if (FilterAction.IsSelected)
+            {
+                State.Movies.Clear();
+                State.Movies = API.FilterMovieByAction();
+            }
+            else if (FilterComedy.IsSelected)
+            {
+                State.Movies.Clear();
+                State.Movies = API.FilterMovieByComedy();
+            }
+            else if (FilterFamily.IsSelected)
+            {
+                State.Movies.Clear();
+                State.Movies = API.FilterMovieByFamily();
+            }
+            else if (FilterHorror.IsSelected)
+            {
+                State.Movies.Clear();
+                State.Movies = API.FilterMovieByHorror();
+            }
+            else
+            {
+                State.Movies = API.GetMovie(movie_skip_count, movie_take_count);
+            }
 
             int column_count = MovieGrid.ColumnDefinitions.Count;
 
@@ -87,8 +109,8 @@ namespace MovieRental
         public MovieWindow()
         {
             InitializeComponent();
-            LoadMovies();
-            
+            LoadAllMovies();
+
         }
         // Vad som händer när man klickar på en filmikon i appen.
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
@@ -108,6 +130,44 @@ namespace MovieRental
                 MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+
+        private void ShowProfile(object sender, RoutedEventArgs e)
+        {
+            var Profile = new Profile();
+            Profile.Show();
+        }
+
+        private void Action_Filter_Btn(object sender, RoutedEventArgs e)
+        {
+            FilterAction.IsSelected = true; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
+            //this.UpdateLayout();
+            MovieGrid.Children.Clear();
+            LoadAllMovies();
+        }
+
+        private void Comedy_Filter_Btn(object sender, RoutedEventArgs e)
+        {
+            FilterComedy.IsSelected = true; FilterAction.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
+            //this.UpdateLayout();
+            MovieGrid.Children.Clear();
+            LoadAllMovies();
+        }
+
+        private void Family_Filter_Btn(object sender, RoutedEventArgs e)
+        {
+            FilterFamily.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterHorror.IsSelected = false;
+            //this.UpdateLayout();
+            MovieGrid.Children.Clear();
+            LoadAllMovies();
+        }
+
+        private void Horror_Filter_Btn(object sender, RoutedEventArgs e)
+        {
+            FilterHorror.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
+            //this.UpdateLayout();
+            MovieGrid.Children.Clear();
+            LoadAllMovies();
         }
     }
 }
