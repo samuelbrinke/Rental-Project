@@ -136,7 +136,6 @@ namespace MovieRental
         {
             var Profile = new Profile();
             Profile.Show();
-            this.Close();
         }
 
         private void Action_Filter_Btn(object sender, RoutedEventArgs e)
