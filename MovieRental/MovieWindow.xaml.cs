@@ -169,5 +169,11 @@ namespace MovieRental
             MovieGrid.Children.Clear();
             LoadAllMovies();
         }
+
+        private void HomeBtn(object sender, RoutedEventArgs e)
+        {
+            FilterHorror.IsSelected = false; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
+            LoadAllMovies();
+        }
     }
 }
