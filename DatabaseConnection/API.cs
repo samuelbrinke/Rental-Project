@@ -78,10 +78,11 @@ namespace DatabaseConnection
 
         public static bool RegisterSale(User user, Movie movie)
         {
+            
             // Försök att lägga till ett nytt sales record
             try
             {
-                ctx.Add(new Rental() { Date = DateTime.Now, User = user, Movie = movie });
+                ctx.Add(new Rental() { DateStart = DateTime.Now, DateEnd = DateTime.Now.AddHours(48), User = user, Movie = movie });
 
                 bool one_record_added = ctx.SaveChanges() == 1;
                 return one_record_added;
