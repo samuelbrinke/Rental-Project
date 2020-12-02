@@ -44,7 +44,7 @@
                             IsChecked="False"                           
                             Content="Orders" />      
                 </Grid>
-                <Grid Name ="Grid_Profile" Margin="10" Visibility="Visible">
+                <Grid Name ="Grid_Profile" Margin="10" Visibility="Collapsed">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
@@ -107,6 +107,21 @@
                         </Grid>
                     </StackPanel>
 
+                </Grid>
+                <Grid>
+                    <StackPanel>
+                        <StackPanel Name="SPOrderAvalible">
+                            <Label >
+                                Orders still avalible:
+                            </Label>
+
+                        </StackPanel>
+                        <StackPanel Name="SPOrderNotAvalible">
+                            <Label>
+                                Orders not avalible:
+                            </Label>
+                        </StackPanel>
+                    </StackPanel>
                 </Grid>
             </StackPanel>
         </Border>

@@ -1,10 +1,10 @@
 # Rental-Project 
 
-## TODO IMORGON ONSDAG
-- [ ] Göra klart profilen. (PRIO 1).
-- [ ] Göra klart menyn i moviesidan. (PRIO 1). Knapp till profilen behövs.
+## TODO IMORGON TORSDAG
+- [ ] Göra klart profilen. Lite småpill kvar.
+- [x] Göra klart menyn i moviesidan. Lite buggig.
 - [ ] Börja pilla på Shoppingcarten om vi hinner.
-
+- [ ] Ta bort profilrutan när man trycker på registreringsknappen.
 
 ## (LOGIN )Riktigt konto med användarnamn + lösenord 
 - [x] Ändra modellen på databasen och lägg till lösenord på user.
