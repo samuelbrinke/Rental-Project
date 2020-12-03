@@ -17,6 +17,7 @@
 - [x] Gör deisgnen
 - [x] Koppla ihop med databasen för att skapa en user
 - [x] Krashar när man registrerar en user med ett användarnamn som redan finns (Bugg)
+- [ ] Göra registreringssidan till en UserCOntrol.
 
 ## MainWindow som visar alla filmer 
 - [x] Seeda filmerna till databasen
@@ -26,6 +27,9 @@
 - [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. PRIO 2
 
 - [x] Ny ruta för att kolla sin profil och tex ändra lösenord. 
+
+## ProfileWindow
+- [ ] Göra profilsidan till en UserCOntrol.
 
 ## SHOPPINGCART
 - [ ] Fixa en shoppingcart PRIO 3
