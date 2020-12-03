@@ -44,6 +44,7 @@
                             IsChecked="False"                           
                             Content="Orders" />      
                 </Grid>
+                
                 <Grid Name ="Grid_Profile" Margin="10" Visibility="Collapsed">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -78,7 +79,7 @@
                     
                     
                     </Grid>
-                <Grid Name ="Grid_ResetPassword" Visibility="Collapsed">
+                <Grid Name ="Grid_ResetPassword" Visibility="Visible">
                     <StackPanel>
                         <Grid Name="GridForText">
                             <Grid.RowDefinitions>
@@ -108,22 +109,31 @@
                     </StackPanel>
 
                 </Grid>
-                <Grid>
-                    <StackPanel>
-                        <StackPanel Name="SPOrderAvalible">
-                            <Label >
+                
+                <Grid Name ="Grid_Orders" Height="250" Visibility="Collapsed">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <Label FontWeight="Bold">
                                 Orders still avalible:
                             </Label>
+                            <StackPanel Name="SPOrderAvalible">
 
-                        </StackPanel>
-                        <StackPanel Name="SPOrderNotAvalible">
-                            <Label>
+
+                            </StackPanel>
+                            <Label FontWeight="Bold">
                                 Orders not avalible:
                             </Label>
+                            <StackPanel Name="SPOrderNotAvalible">
+
+                            </StackPanel>
+
                         </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </Grid>
+                
+
             </StackPanel>
+            
         </Border>
     </Grid>
 </Window>
