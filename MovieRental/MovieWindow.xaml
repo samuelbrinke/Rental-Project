@@ -53,7 +53,7 @@
             </Grid>
             <Grid Height="350">
                 <ScrollViewer>
-                <Grid Name="MovieGrid" ShowGridLines="True">
+                <Grid Name="MovieGrid">
                     <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
                     <Grid.RowDefinitions>
                     </Grid.RowDefinitions>

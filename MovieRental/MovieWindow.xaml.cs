@@ -147,7 +147,6 @@ namespace MovieRental
         private void Action_Filter_Btn(object sender, RoutedEventArgs e)
         {
             FilterAction.IsSelected = true; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
-            Menu.Children.Clear();
             MovieGrid.Children.Clear();
             LoadAllMovies();
         }
@@ -155,7 +154,6 @@ namespace MovieRental
         private void Comedy_Filter_Btn(object sender, RoutedEventArgs e)
         {
             FilterComedy.IsSelected = true; FilterAction.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
-            Menu.Children.Clear();
             MovieGrid.Children.Clear();
             LoadAllMovies();
         }
@@ -163,7 +161,6 @@ namespace MovieRental
         private void Family_Filter_Btn(object sender, RoutedEventArgs e)
         {
             FilterFamily.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterHorror.IsSelected = false;
-            Menu.Children.Clear();
             MovieGrid.Children.Clear();
             LoadAllMovies();
         }
@@ -172,14 +169,12 @@ namespace MovieRental
         {
             FilterHorror.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
             MovieGrid.Children.Clear();
-            Menu.Children.Clear();
             LoadAllMovies();
         }
 
         private void HomeBtn(object sender, RoutedEventArgs e)
         {
             FilterHorror.IsSelected = false; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
-            Menu.Children.Clear();
             MovieGrid.Children.Clear();
             LoadAllMovies();
         }
