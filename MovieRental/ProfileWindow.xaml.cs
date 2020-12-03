@@ -36,29 +36,32 @@ namespace MovieRental
 
         private void Movie_btn_Click(object sender, RoutedEventArgs e)
         {
-            //skapar en ny label som jag sedan kan placera in en info rad om. behöver skapa flera labels inom 1 film.
-            //new Label() { Content = "Hej"};
 
-            //Label MovieStartDate = new Label();
-            //Label MovieEndDate = new Label();
-            
-            //Border border = new Border();
-            
-            //SPOrderAvalible.Children.Clear();
-
-            //En lista som jag sedan placerar alla bokningar i.
             List<Rental> booking = new List<Rental>();
             booking.AddRange(API.GetRentalByUser(State.Users));
+            Grid_Profile.Visibility = Visibility.Collapsed;
+            Grid_ResetPassword.Visibility = Visibility.Collapsed;
+            Grid_Orders.Visibility = Visibility.Visible;
+            SPOrderAvalible.Children.Clear();
+            SPOrderNotAvalible.Children.Clear();
 
-            //Movietitle.Content = "Movie Title: " + booking[0].Movie.ToString();
-            //MovieStartDate.Content = "Date booked: " + booking[0].DateStart.ToString();
-            //MovieEndDate.Content = "Expired Date: " + booking[0].DateEnd.ToString();
-            for(int i = 0; i < booking.Count; i++)
+            for (int i = 0; i < booking.Count; i++)
             {
-                SPOrderAvalible.Children.Add(new Label() { Content = "Movie title: " + booking[i].Movie.Title.ToString() });
-                SPOrderAvalible.Children.Add(new Label() { Content = "Movie StartDate: " + booking[i].DateStart.ToString() });
-                SPOrderAvalible.Children.Add(new Label() { Content = "Movie EndDate: " + booking[i].DateEnd.ToString() });
-                SPOrderAvalible.Children.Add(new Border() { BorderThickness = new Thickness(1.0), BorderBrush = Brushes.Purple });
+                if( booking[i].DateEnd > DateTime.Now)
+                {
+                    SPOrderAvalible.Children.Add(new Label() { Content = "Movie title: " + booking[i].Movie.Title.ToString() });
+                    SPOrderAvalible.Children.Add(new Label() { Content = "Movie StartDate: " + booking[i].DateStart.ToString() });
+                    SPOrderAvalible.Children.Add(new Label() { Content = "Movie EndDate: " + booking[i].DateEnd.ToString() });
+                    SPOrderAvalible.Children.Add(new Border() { BorderThickness = new Thickness(1.0), BorderBrush = Brushes.Purple });
+                }
+                else
+                {   
+                    SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie title: " + booking[i].Movie.Title.ToString() });
+                    SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie StartDate: " + booking[i].DateStart.ToString() });
+                    SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie EndDate: " + booking[i].DateEnd.ToString() });
+                    SPOrderNotAvalible.Children.Add(new Border() { BorderThickness = new Thickness(1.0), BorderBrush = Brushes.Purple });
+                }
+                
             }
             
             
@@ -70,12 +73,14 @@ namespace MovieRental
         {
             Grid_Profile.Visibility = Visibility.Collapsed;
             Grid_ResetPassword.Visibility = Visibility.Visible;
+            Grid_Orders.Visibility = Visibility.Collapsed;
         }
 
         private void Profile_btn_Click(object sender, RoutedEventArgs e)
         {
             Grid_Profile.Visibility = Visibility.Visible;
             Grid_ResetPassword.Visibility = Visibility.Collapsed;
+            Grid_Orders.Visibility = Visibility.Collapsed;
 
             //Show informoation from user in database
             var user = State.Users;
