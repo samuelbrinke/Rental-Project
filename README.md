@@ -1,10 +1,10 @@
 # Rental-Project 
 
 ## TODO IMORGON TORSDAG
-- [ ] Göra klart profilen. Lite småpill kvar.
-- [x] Göra klart menyn i moviesidan. Lite buggig.
+- [x] Göra klart profilen.
+- [x] Göra klart menyn i moviesidan.
 - [ ] Börja pilla på Shoppingcarten om vi hinner.
-- [ ] Ta bort profilrutan när man trycker på registreringsknappen.
+- [x] Ta bort profilrutan när man trycker på registreringsknappen.
 
 ## (LOGIN )Riktigt konto med användarnamn + lösenord 
 - [x] Ändra modellen på databasen och lägg till lösenord på user.
@@ -20,15 +20,18 @@
 
 ## MainWindow som visar alla filmer 
 - [x] Seeda filmerna till databasen
-- [ ] Lägga till en placeholder bild på bilder som ej fungerar. Inte visa filmer som ej har en bild.
+- [ ] Lägga till en placeholder bild på bilder som ej fungerar. Inte visa filmer som ej har en bild. PRIO 3
 - [x] Visa alla filmer i mainwindow (Bugg, dubbletter)
-- [ ] Fixa så filmerna går att sortera upp utefter genrar från csv filen.
-- [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. 
+- [x] Fixa så filmerna går att filtrera upp utefter genrar från csv filen.
+- [ ] Sök funktion efter filmer // Menu alternativ för tex olika genrar. PRIO 2
 
-- [ ] Ny ruta för att kolla sin profil och tex ändra lösenord. 
+- [x] Ny ruta för att kolla sin profil och tex ändra lösenord. 
+
+## SHOPPINGCART
+- [ ] Fixa en shoppingcart PRIO 3
 
 **VIKTIGT**
-- [ ] Få upp mer info om vald film.
+- [ ] Få upp mer info om vald film. PRIO 1
 - [ ] alternativ till att hyra. Typ klar.
 -------------
 - [ ] Shoppingcart (Med funktioner som tex bekräfta hyrning och betalning.)
