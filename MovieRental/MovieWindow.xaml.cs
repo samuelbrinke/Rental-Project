@@ -148,6 +148,7 @@ namespace MovieRental
         {
             FilterAction.IsSelected = true; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
             MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
         }
 
@@ -155,6 +156,7 @@ namespace MovieRental
         {
             FilterComedy.IsSelected = true; FilterAction.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
             MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
         }
 
@@ -162,6 +164,7 @@ namespace MovieRental
         {
             FilterFamily.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterHorror.IsSelected = false;
             MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
         }
 
@@ -169,6 +172,7 @@ namespace MovieRental
         {
             FilterHorror.IsSelected = true; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
             MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
         }
 
@@ -176,6 +180,7 @@ namespace MovieRental
         {
             FilterHorror.IsSelected = false; FilterAction.IsSelected = false; FilterComedy.IsSelected = false; FilterFamily.IsSelected = false;
             MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
         }
     }
