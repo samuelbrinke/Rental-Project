@@ -63,7 +63,7 @@ namespace MovieRental
                 MovieGrid.RowDefinitions.Add(
                     new RowDefinition()
                     {
-                        Height = new GridLength(140, GridUnitType.Pixel)
+                        Height = new GridLength(200, GridUnitType.Pixel)
                     });
 
                 // Lägga till en film i varje cell för en rad

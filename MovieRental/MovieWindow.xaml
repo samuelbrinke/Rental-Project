@@ -63,10 +63,8 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                         <ColumnDefinition />
-                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                             <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' --> 
-
                     </Grid>
                 </ScrollViewer>
             </Grid>
