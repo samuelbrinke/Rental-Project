@@ -9,65 +9,63 @@
         Title="MovieWindow" Height="450" Width="800">
     <Grid>
             
-            <!-- 
-            Grid är användbart när man vill få lite struktur i sin UI.
-            Alla celler måste inte vara lika stora dock som i detta exemplet
-        -->
-        <ScrollViewer>
-            <StackPanel>
-                <Grid Name ="Menu" Background="#E6EFF4">
-                    <Grid.RowDefinitions>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition>
-                        </ColumnDefinition>
-                        <ColumnDefinition>
-                        </ColumnDefinition>
-                        <ColumnDefinition>
-                        </ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Content="Blockbuster" FontSize="24"></Label>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Menu Background="#E6EFF4" Margin="5,0">
-                            <ComboBox materialDesign:HintAssist.Hint="Genre">
-                                <ComboBoxItem Name="FilterAction">
-                                    <Button Name="ActionBtn" Content="Action" Width="100" Click="Action_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
-                                </ComboBoxItem>
-                                <ComboBoxItem Name="FilterComedy">
-                                    <Button Name="ComedyBtn" Content="Comedy" Width="100" Click="Comedy_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
-                                </ComboBoxItem>
-                                <ComboBoxItem Name="FilterFamily">
-                                    <Button Name="FamilyBtn" Content="Family" Width="100" Click="Family_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
-                                </ComboBoxItem>
-                                <ComboBoxItem Name="FilterHorror">
-                                    <Button Name="HorrorBtn" Content="Horror" Width="100" Click="Horror_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
-                                </ComboBoxItem>
-                            </ComboBox>
-                        </Menu>
-                        <Button Content="Home" Click="HomeBtn" Margin="5,0" Background="#E6EFF4" Foreground="Black" BorderThickness="0"></Button>
-                    </StackPanel>
-                    <StackPanel Background="#E6EFF4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
-                        <Button Content="Profile" HorizontalAlignment="Right" Click="ShowProfile"></Button>
-                    </StackPanel>
-                </Grid>
-                <Grid Name="MovieGrid" ShowGridLines="True">
+        <!-- 
+        Grid är användbart när man vill få lite struktur i sin UI.
+        Alla celler måste inte vara lika stora dock som i detta exemplet
+    -->
+        <StackPanel>
+            <Grid Name ="Menu" Background="#E6EFF4">
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition>
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+                    </ColumnDefinition>
+                    <ColumnDefinition>
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Blockbuster" FontSize="24"></Label>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Menu Background="#E6EFF4" Margin="5,0">
+                        <ComboBox materialDesign:HintAssist.Hint="Genre">
+                            <ComboBoxItem Name="FilterAction">
+                                <Button Name="ActionBtn" Content="Action" Width="100" Click="Action_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                            </ComboBoxItem>
+                            <ComboBoxItem Name="FilterComedy">
+                                <Button Name="ComedyBtn" Content="Comedy" Width="100" Click="Comedy_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                            </ComboBoxItem>
+                            <ComboBoxItem Name="FilterFamily">
+                                <Button Name="FamilyBtn" Content="Family" Width="100" Click="Family_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                            </ComboBoxItem>
+                            <ComboBoxItem Name="FilterHorror">
+                                <Button Name="HorrorBtn" Content="Horror" Width="100" Click="Horror_Filter_Btn" Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                            </ComboBoxItem>
+                        </ComboBox>
+                    </Menu>
+                    <Button Content="Home" Click="HomeBtn" Margin="5,0" Background="#E6EFF4" Foreground="Black" BorderThickness="0"></Button>
+                </StackPanel>
+                <StackPanel Background="#E6EFF4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Button Content="Profile" HorizontalAlignment="Right" Click="ShowProfile"></Button>
+                </StackPanel>
+            </Grid>
+            <Grid Name="MovieGrid" ShowGridLines="True">
 
-                    <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
-                    <Grid.RowDefinitions>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' -->
-                </Grid>
-            </StackPanel>
-        </ScrollViewer>
+                <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+                    
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' -->
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
