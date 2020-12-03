@@ -46,7 +46,7 @@
                                 </ComboBoxItem>
                             </ComboBox>
                         </Menu>
-                        <Button Content="Home" Margin="5,0" Background="#E6EFF4" Foreground="Black" BorderThickness="0"></Button>
+                        <Button Content="Home" Click="HomeBtn" Margin="5,0" Background="#E6EFF4" Foreground="Black" BorderThickness="0"></Button>
                     </StackPanel>
                     <StackPanel Background="#E6EFF4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                         <Button Content="Profile" HorizontalAlignment="Right" Click="ShowProfile"></Button>
