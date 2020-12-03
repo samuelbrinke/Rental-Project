@@ -51,20 +51,24 @@
                     <Button Content="Profile" HorizontalAlignment="Right" Click="ShowProfile"></Button>
                 </StackPanel>
             </Grid>
-            <Grid Name="MovieGrid" ShowGridLines="True">
-
-                <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
-                <Grid.RowDefinitions>
-                </Grid.RowDefinitions>
+            <Grid Height="350">
+                <ScrollViewer>
+                <Grid Name="MovieGrid" ShowGridLines="True">
+                    <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
+                    <Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
                     
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                            <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' --> 
+
+                    </Grid>
+                </ScrollViewer>
             </Grid>
         </StackPanel>
     </Grid>
