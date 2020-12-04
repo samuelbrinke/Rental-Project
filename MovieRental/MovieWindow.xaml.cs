@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -129,15 +130,15 @@ namespace MovieRental
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
             // Lägg valet på minne.
             State.Pick = State.Movies[i];
+
+            MovieImage_Img.Source = new BitmapImage(new Uri(State.Pick.ImageURL));
             MovieTitle_Lbl.Content = State.Pick.Title;
-            Movie_Info_Canvas.Visibility = Visibility.Visible;
-            // Försök att registrera en uthyrning.
-            /* if (API.RegisterSale(State.Users, State.Pick))
-                 // MessageBox är små pop-up fönster som är behändiga för att varna användaren om fel etc.
-                 MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
-             else
-                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            */
+            MovieGenre_Lbl.Content = State.Pick.Genre;
+            MovieRating_Lbl.Content = State.Pick.Rating;
+            //MovieIMDB_Lbl.Content = State.Pick.ImdbUrl;
+                //Uri uri = new Uri(State.Pick.ImdbUrl);
+            //ImdbLink.NavigateUri = uri;
+            Movie_Info_SP.Visibility = Visibility.Visible;
         }
 
         private void ShowProfile(object sender, RoutedEventArgs e)
@@ -184,6 +185,20 @@ namespace MovieRental
             MovieGrid.Children.Clear();
             MovieGrid.RowDefinitions.Clear();
             LoadAllMovies();
+        }
+
+        private void Close_MovieInfo_Btn(object sender, RoutedEventArgs e)
+        {
+            Movie_Info_SP.Visibility = Visibility.Collapsed;
+        }
+
+        private void Rent_Btn(object sender, RoutedEventArgs e)
+        {
+            if (API.RegisterSale(State.Users, State.Pick))
+                // MessageBox är små pop-up fönster som är behändiga för att varna användaren om fel etc.
+                MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
     }
 }

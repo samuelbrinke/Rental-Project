@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MovieWindow"
     Width="800"
-    Height="450"
+    Height="650"
     mc:Ignorable="d">
     <Grid>
         <StackPanel>
@@ -81,7 +81,7 @@
                         Content="Profile" />
                 </StackPanel>
             </Grid>
-            <Grid Height="350">
+            <Grid Height="580">
                 <ScrollViewer>
                     <StackPanel>
                         <Grid Name="MovieGrid">
@@ -98,22 +98,40 @@
                         </Grid>
                     </StackPanel>
                 </ScrollViewer>
-                <Canvas
-                    Name="Movie_Info_Canvas"
-                    Width="auto"
-                    Height="auto"
+                <StackPanel
+                    Name="Movie_Info_SP"
+                    Height="200"
+                    Margin="0,0,20,0"
+                    VerticalAlignment="Bottom"
+                    Background="#fafafa"
                     Visibility="Collapsed">
-                    <StackPanel Name="Movie_Info" Orientation="Horizontal">
+                    <StackPanel>
+                        <Button
+                            Click="Close_MovieInfo_Btn"
+                            Content="Close"
+                            Style="{StaticResource MaterialDesignOutlinedButton}" />
+                    </StackPanel>
+                    <StackPanel
+                        Name="Movie_Info"
+                        HorizontalAlignment="Stretch"
+                        Orientation="Horizontal">
                         <StackPanel>
-                            <Image Name="MovieImage_Img" />
+                            <Image
+                                Name="MovieImage_Img"
+                                Width="100"
+                                Height="100" />
                         </StackPanel>
                         <StackPanel>
-                            <Label Name="MovieTitle_Lbl" FontSize="30" />
-                            <Label Name="MovieGenre_Lbl" FontSize="30" />
-                            <Label Name="MovieRating_Lbl" FontSize="30" />
+                            <Label Name="MovieTitle_Lbl" FontSize="20" />
+                            <Label Name="MovieGenre_Lbl" FontSize="20" />
+                            <Label Name="MovieRating_Lbl" FontSize="20" />
+                            <Label Name="MovieIMDB_Lbl" FontSize="20" />
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                            <Button Click="Rent_Btn" Content="Rent" />
                         </StackPanel>
                     </StackPanel>
-                </Canvas>
+                </StackPanel>
             </Grid>
         </StackPanel>
     </Grid>
