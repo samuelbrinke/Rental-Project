@@ -30,6 +30,8 @@
 
 ## ProfileWindow
 - [ ] Göra profilsidan till en UserCOntrol.
+- [ ] Lägga till en ruta att man har uppdaterat användarens information.
+- [ ] Lägga till ruta för passwordet man har.
 
 ## SHOPPINGCART
 - [ ] Fixa en shoppingcart PRIO 3
