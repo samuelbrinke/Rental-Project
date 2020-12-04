@@ -74,14 +74,24 @@
                     Grid.Column="2"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
+                    Orientation="Horizontal"
                     Background="#E6EFF4">
+                    <TextBox Width="100" Name="Search_box"  HorizontalAlignment="Left" Margin="0,0, 10,0" >
+
+                    </TextBox>
+                    <Button Name="Search_Button" IsDefault="True" Click ="Search_Button_Click"  Margin="0,0,10,0">
+                        <materialDesign:PackIcon Kind="Magnify" />
+                    </Button>
                     <Button
                         HorizontalAlignment="Right"
                         Click="ShowProfile"
                         Content="Profile" />
+                    
+
                 </StackPanel>
             </Grid>
             <Grid Height="580">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Name="NoMoviesFound_lbl" Visibility="Collapsed">No movies was found</Label>
                 <ScrollViewer>
                     <StackPanel>
                         <Grid Name="MovieGrid">

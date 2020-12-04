@@ -45,6 +45,14 @@ namespace MovieRental
                 State.Movies.Clear();
                 State.Movies = API.FilterMovieByHorror();
             }
+            else if (Search_box.Text != "")
+            {
+                State.Movies.Clear();
+                
+                State.Movies = API.FilterMovieBySearch(Search_box.Text);
+                
+                
+            }
             else
             {
                 if (State.Movies != null)
@@ -199,6 +207,28 @@ namespace MovieRental
                 MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Search_Button_Click(object sender, RoutedEventArgs e)
+        {
+            State.Movies = API.FilterMovieBySearch(Search_box.Text);
+            FilterComedy.IsSelected = false; FilterAction.IsSelected = false; FilterFamily.IsSelected = false; FilterHorror.IsSelected = false;
+            MovieGrid.Children.Clear();
+            MovieGrid.RowDefinitions.Clear();
+            LoadAllMovies();
+            if (State.Movies.Count == 0)
+            {
+                NoMoviesFound_lbl.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                NoMoviesFound_lbl.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

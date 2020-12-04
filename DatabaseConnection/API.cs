@@ -62,6 +62,13 @@ namespace DatabaseConnection
                 .ToList();
         }
 
+        public static List<Movie> FilterMovieBySearch(string search)
+        {
+            return ctx.Movies
+                .Where(f => f.Title.Contains(search))
+                .ToList();
+        }
+
         public static void AddUser(string username, string firstname, string lastname, string personalnumber, string phonenumber, string zipcode, string adress )
         {
             User user = new User();
