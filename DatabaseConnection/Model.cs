@@ -39,6 +39,8 @@ namespace DatabaseConnection
 
         public string Rating { get; set; }
 
+        public string ImdbUrl { get; set; }
+
         public virtual List<Rental> Sales { get; set; }
     }
 

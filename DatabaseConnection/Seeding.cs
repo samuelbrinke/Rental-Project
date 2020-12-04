@@ -25,12 +25,13 @@ namespace DatabaseConnection
                     string genre = cells[4].Replace('|', ' ');
                     string url = cells[5].Trim('"');
                     string rating = cells[3];
+                    string imdburl = cells[1];
 
                     // Hoppa över alla icke-fungerande url:er
                     try { var test = new Uri(url); }
                     catch (Exception) { continue; }
 
-                    movies.Add(new Movie { Title = cells[2], ImageURL = url, Genre = genre, Rating = rating});
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url, Genre = genre, Rating = rating, ImdbUrl = imdburl});
                 }
 
                 ctx.AddRange(movies);
