@@ -99,11 +99,20 @@
                     </StackPanel>
                 </ScrollViewer>
                 <Canvas
-                    Name="Movie_Info"
+                    Name="Movie_Info_Canvas"
                     Width="auto"
                     Height="auto"
-                    Visibility="Visible">
-                    <local:MovieInfo Panel.ZIndex="2" />
+                    Visibility="Collapsed">
+                    <StackPanel Name="Movie_Info" Orientation="Horizontal">
+                        <StackPanel>
+                            <Image Name="MovieImage_Img" />
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Name="MovieTitle_Lbl" FontSize="30" />
+                            <Label Name="MovieGenre_Lbl" FontSize="30" />
+                            <Label Name="MovieRating_Lbl" FontSize="30" />
+                        </StackPanel>
+                    </StackPanel>
                 </Canvas>
             </Grid>
         </StackPanel>

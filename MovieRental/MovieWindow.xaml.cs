@@ -129,8 +129,8 @@ namespace MovieRental
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
             // Lägg valet på minne.
             State.Pick = State.Movies[i];
-            //MovieInfo.MovieTitle_Lbl.Content = State.Pick.Title;
-            
+            MovieTitle_Lbl.Content = State.Pick.Title;
+            Movie_Info_Canvas.Visibility = Visibility.Visible;
             // Försök att registrera en uthyrning.
             /* if (API.RegisterSale(State.Users, State.Pick))
                  // MessageBox är små pop-up fönster som är behändiga för att varna användaren om fel etc.
@@ -139,10 +139,7 @@ namespace MovieRental
                  MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             */
         }
-        public void asd()
-        {
-            //MovieInfo.Movie_Inf
-        }
+
         private void ShowProfile(object sender, RoutedEventArgs e)
         {
             var Profile = new Profile();
