@@ -37,6 +37,8 @@ namespace DatabaseConnection
 
         public string Genre { get; set; }
 
+        public string Rating { get; set; }
+
         public virtual List<Rental> Sales { get; set; }
     }
 
