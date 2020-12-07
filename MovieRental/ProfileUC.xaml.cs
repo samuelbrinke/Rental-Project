@@ -1,7 +1,7 @@
-﻿using System;
+﻿using DatabaseConnection;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,26 +9,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DatabaseConnection;
-using static System.Net.Mime.MediaTypeNames;
-using System.Windows;
 
 namespace MovieRental
 {
     /// <summary>
-    /// Interaction logic for Profile.xaml
+    /// Interaction logic for ProfileUC.xaml
     /// </summary>
-    public partial class Profile : Window
+    public partial class ProfileUC : UserControl
     {
-        
-
-        public Profile()
+        public ProfileUC()
         {
             InitializeComponent();
-            
         }
-
         private void Grid_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
@@ -47,7 +41,7 @@ namespace MovieRental
 
             for (int i = 0; i < booking.Count; i++)
             {
-                if( booking[i].DateEnd > DateTime.Now)
+                if (booking[i].DateEnd > DateTime.Now)
                 {
                     SPOrderAvalible.Children.Add(new Label() { Content = "Movie title: " + booking[i].Movie.Title.ToString() });
                     SPOrderAvalible.Children.Add(new Label() { Content = "Movie StartDate: " + booking[i].DateStart.ToString() });
@@ -55,16 +49,16 @@ namespace MovieRental
                     SPOrderAvalible.Children.Add(new Border() { BorderThickness = new Thickness(1.0), BorderBrush = Brushes.Purple });
                 }
                 else
-                {   
+                {
                     SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie title: " + booking[i].Movie.Title.ToString() });
                     SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie StartDate: " + booking[i].DateStart.ToString() });
                     SPOrderNotAvalible.Children.Add(new Label() { Content = "Movie EndDate: " + booking[i].DateEnd.ToString() });
                     SPOrderNotAvalible.Children.Add(new Border() { BorderThickness = new Thickness(1.0), BorderBrush = Brushes.Purple });
                 }
-                
+
             }
-            
-            
+
+
 
 
         }
@@ -94,7 +88,7 @@ namespace MovieRental
 
         }
 
-        
+
 
         private void ChangePassword_btn_Click(object sender, RoutedEventArgs e)
         {

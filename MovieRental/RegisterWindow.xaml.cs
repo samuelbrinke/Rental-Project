@@ -27,7 +27,8 @@ namespace MovieRental
 
         private void Register_btn(object sender, RoutedEventArgs e)
         {
-            API.AddUser(Username_txtBox.Text, FirstName_txtBox.Text, LastName_txtBox.Text, PersonalNumber_txtBox.Text, PhoneNumber_txtBox.Text, ZipCode_txtBox.Text, Adress_txtBox.Text);
+            API.AddUser(Username_txtBox.Text, Password_txtBox.Password, FirstName_txtBox.Text, LastName_txtBox.Text, PersonalNumber_txtBox.Text, PhoneNumber_txtBox.Text, ZipCode_txtBox.Text, Adress_txtBox.Text);
+            RegisterSuccess.Visibility = Visibility.Visible;
         }
 
         private void PreviewTextInput(object sender, TextCompositionEventArgs e)

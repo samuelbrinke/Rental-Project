@@ -151,8 +151,10 @@ namespace MovieRental
 
         private void ShowProfile(object sender, RoutedEventArgs e)
         {
-            var Profile = new Profile();
-            Profile.Show();
+            //var Profile = new Profile();
+            //Profile.Show();
+            Movies.Visibility = Visibility.Collapsed;
+            ProfileUC.Visibility = Visibility.Visible;
         }
 
         private void Action_Filter_Btn(object sender, RoutedEventArgs e)
@@ -229,6 +231,12 @@ namespace MovieRental
             {
                 NoMoviesFound_lbl.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void Go_Back_Btn(object sender, RoutedEventArgs e)
+        {
+            ProfileUC.Visibility = Visibility.Collapsed;
+            Movies.Visibility = Visibility.Visible;
         }
     }
 }

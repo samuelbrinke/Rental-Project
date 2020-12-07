@@ -1,38 +1,62 @@
-﻿<Window x:Class="MovieRental.RegisterWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MovieRental"
-        mc:Ignorable="d"
-        Title="RegisterWindow" Height="600" Width="300">
+﻿<Window
+    x:Class="MovieRental.RegisterWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MovieRental"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="RegisterWindow"
+    Width="300"
+    Height="650"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel VerticalAlignment="Center">
-            <Label Content="Blockbuster Movie Rental" Margin="0, 0, 0, 30" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20"></Label>
-            <Border Width="210" BorderBrush="#e6ecf0" BorderThickness="1" CornerRadius="5">
+            <Label
+                Margin="0,0,0,30"
+                HorizontalAlignment="Center"
+                Content="Blockbuster Movie Rental"
+                FontSize="20"
+                FontWeight="Bold" />
+            <Border
+                Width="250"
+                BorderBrush="#e6ecf0"
+                BorderThickness="1"
+                CornerRadius="5">
                 <StackPanel>
                     <StackPanel>
                         <Label HorizontalAlignment="Center">Register</Label>
                     </StackPanel>
-                   
+
                     <StackPanel Margin="10">
                         <Label>Enter Username:</Label>
-                        <TextBox Name ="Username_txtBox"></TextBox>
+                        <TextBox Name="Username_txtBox" />
                         <Label>Enter Password:</Label>
-                        <TextBox Name ="Password_txtBox"></TextBox>
+                        <PasswordBox Name="Password_txtBox" />
                         <Label>Enter First Name:</Label>
-                        <TextBox Name ="FirstName_txtBox"></TextBox>
+                        <TextBox Name="FirstName_txtBox" />
                         <Label>Enter Last Name:</Label>
-                        <TextBox Name ="LastName_txtBox"></TextBox>
+                        <TextBox Name="LastName_txtBox" />
                         <Label>Enter Personal Number:</Label>
-                        <TextBox Name ="PersonalNumber_txtBox" PreviewTextInput="PreviewTextInput"></TextBox>
+                        <TextBox Name="PersonalNumber_txtBox" PreviewTextInput="PreviewTextInput" />
                         <Label>Enter Adress:</Label>
-                        <TextBox Name ="Adress_txtBox"></TextBox>
+                        <TextBox Name="Adress_txtBox" />
                         <Label>Enter ZipCode:</Label>
-                        <TextBox Name ="ZipCode_txtBox"></TextBox>
+                        <TextBox Name="ZipCode_txtBox" />
                         <Label>Enter PhoneNumber:</Label>
-                        <TextBox Name ="PhoneNumber_txtBox"></TextBox>
-                        <Button Margin=" 10" Click="Register_btn">Register</Button>
+                        <TextBox Name="PhoneNumber_txtBox" />
+                        <Button Margin="10" Click="Register_btn">Register</Button>
+                        <Label
+                            Name="RegisterSuccess"
+                            Background="#d4edda"
+                            Content="Success! You can now close this window&#x0a;and login."
+                            Foreground="#155724"
+                            Visibility="Collapsed" />
+                        <Label
+                            Name="RegisterError"
+                            Background="#f8d7da"
+                            Content="Username already exists"
+                            Foreground="#721c24"
+                            Visibility="Collapsed" />
                     </StackPanel>
                 </StackPanel>
             </Border>

@@ -69,12 +69,13 @@ namespace DatabaseConnection
                 .ToList();
         }
 
-        public static void AddUser(string username, string firstname, string lastname, string personalnumber, string phonenumber, string zipcode, string adress )
+        public static void AddUser(string username, string password, string firstname, string lastname, string personalnumber, string phonenumber, string zipcode, string adress )
         {
             User user = new User();
             user.FirstName = firstname;
             user.LastName = lastname;
             user.UserName = username;
+            user.Password = password;
             user.PhoneNumber = phonenumber;
             user.ZipCode = zipcode;
             user.Adress = adress;
