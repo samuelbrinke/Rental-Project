@@ -142,7 +142,7 @@ namespace MovieRental
             MovieImage_Img.Source = new BitmapImage(new Uri(State.Pick.ImageURL));
             MovieTitle_Lbl.Content = State.Pick.Title;
             MovieGenre_Lbl.Content = State.Pick.Genre;
-            MovieRating_Lbl.Content = State.Pick.Rating;
+            MovieRating_Lbl.Content = State.Pick.Rating + "/10";
             //MovieIMDB_Lbl.Content = State.Pick.ImdbUrl;
                 //Uri uri = new Uri(State.Pick.ImdbUrl);
             //ImdbLink.NavigateUri = uri;
