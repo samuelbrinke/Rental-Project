@@ -20,7 +20,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <Label Content="Blockbuster" FontSize="24" />
+                    <Label Content="TheMovieBay" FontSize="24" />
                 </StackPanel>
                 <StackPanel
                     Grid.Column="1"
@@ -64,11 +64,9 @@
                     </Menu>
                     <Button
                         Margin="5,0"
-                        Background="#E6EFF4"
-                        BorderThickness="0"
                         Click="HomeBtn"
                         Content="Home"
-                        Foreground="Black" />
+                        Style="{StaticResource MaterialDesignOutlinedButton}" />
                 </StackPanel>
                 <StackPanel
                     Grid.Column="2"
